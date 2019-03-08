@@ -2,11 +2,12 @@
 Ansible role for Redis 5.0 for CentOS 7
 
 ## What's inside?
-1. Redis 5.0
+1. Redis 5.0 on port 6379
 
 ## Interesting dirs and files: 
 ```
-...
+/etc/redis.conf
+/var/log/redis/redis.log
 ```
 
 ## Tested on
@@ -26,7 +27,7 @@ Ansible role for Redis 5.0 for CentOS 7
     ```
 
 ## Other links
-- Redis []()
+- Redis [https://redis.io/]()
 
 ## TO DO
 -[ ] add dependencies

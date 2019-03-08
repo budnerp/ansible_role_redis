@@ -1,0 +1,21 @@
+---
+  - name: REDIS - install Redis 5.0
+    yum:
+      name: redis
+      enablerepo: "remi"
+      state: installed
+    register: redis_result
+
+  - name: REDIS - upload Redis configuration custom settings /etc/redis.conf
+    template:
+      src: etc/redis.conf.j2
+      dest: /etc/redis.conf
+      owner: root
+      group: root
+      mode: 0644
+
+  - name: REDIS - enable and start REDIS
+    systemd:
+      name: redis
+      enabled: yes
+      state: started

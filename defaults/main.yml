@@ -1,0 +1,18 @@
+---
+# Listen to one or multiple selected interfaces using the "bind" configuration directive, followed by one or more IP addresses.
+redis_bind: '127.0.0.1'
+
+redis_port: '6379'
+
+# The server verbosity level
+# This can be one of:
+# debug (a lot of information, useful for development/testing)
+# verbose (many rarely useful info, but not a mess like the debug level)
+# notice (moderately verbose, what you want in production probably)
+# warning (only very important / critical messages are logged)
+redis_loglevel: 'notice'
+
+# Number of databases. The default database is DB 0, you can select
+# a different one on a per-connection basis using SELECT <dbid> where
+# dbid is a number between 0 and 'databases'-1
+redis_databases: '3'
